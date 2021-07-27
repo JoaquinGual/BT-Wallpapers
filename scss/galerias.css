@@ -1,0 +1,27 @@
+.contenedor .galeria {
+  width: 100vh;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .galeria .pic {
+  width: 15vh;
+  height: 15vh;
+  border-radius: 10%;
+  border: 2px solid;
+  border-color: black;
+  text-align: center;
+  -webkit-animation-name: nozoompic;
+          animation-name: nozoompic;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+/*# sourceMappingURL=galerias.css.map */

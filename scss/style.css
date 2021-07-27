@@ -1,0 +1,206 @@
+.contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 150%;
+}
+
+.contenedor .galeria {
+  width: 100vh;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .galeria .pic {
+  width: 15vh;
+  height: 15vh;
+  border-radius: 10%;
+  border: 2px solid;
+  border-color: black;
+  text-align: center;
+  -webkit-animation-name: nozoompic;
+          animation-name: nozoompic;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.contenedor .galeria .pic:hover {
+  -webkit-animation-name: zoompic;
+          animation-name: zoompic;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* Efectos */
+@-webkit-keyframes zoompic {
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes zoompic {
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes nozoompic {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes nozoompic {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway, sans-serif';
+}
+
+.bg-black {
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(44%, black), to(#1b1c20));
+  background: linear-gradient(90deg, black 0%, black 44%, #1b1c20 100%);
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  font-family: 'Raleway', sans-serif;
+}
+
+header nav .container-fluid a {
+  margin-left: 2rem;
+  font-size: 18px;
+}
+
+header nav .container-fluid a .logo {
+  width: 5rem;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5rem;
+}
+
+.titulo h1 {
+  font-family: bold;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 3rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 10%;
+  background-color: #272727;
+  position: relative;
+  margin-bottom: 0;
+  bottom: 0;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .contenedor .galeria {
+    display: -ms-grid;
+    display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: repeat(9, 1fr);
+    gap: 15px;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 1200px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0;
+  }
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.form .formContacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 46.11rem;
+  color: black;
+  font-style: oblique;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

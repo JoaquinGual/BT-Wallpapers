@@ -1,0 +1,95 @@
+@import "galerias";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway, sans-serif';
+    
+}
+.bg-black{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 44%, rgba(27,28,32,1) 100%);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    font-family: 'Raleway', sans-serif;
+    nav{
+        .container-fluid{
+            a{
+                margin-left:2rem;
+                font-size:18px;
+                .logo{
+                    width:5rem;
+                }
+            }
+        }
+    }
+}
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    margin-top:5rem;
+    h1{    
+        font-family: bold;    
+    }
+}
+.subtitulo{
+    text-align: center;
+    font-size:35px;
+    margin-top: 3rem;
+}
+
+footer{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color:rgb(39, 39, 39);
+    position: relative;
+    margin-bottom: 0;
+    bottom: 0;
+    margin-top:5rem;
+
+}
+
+@media screen and (max-width:500px){
+    .contenedor{
+        .galeria{
+
+            display:grid;
+            grid-template-columns: repeat(2 , 1fr);
+            grid-template-rows: repeat(9 , 1fr);
+            gap: 15px;
+            justify-items: center;
+            align-items: center;   
+            height:1200px;
+            
+        }
+    }
+    footer{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        bottom: 0;
+        
+        
+    }
+}
+
+.form{
+    display:flex;
+    justify-content:center;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    .formContacto{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        height:46.11rem;
+        color: black;
+        font-style:oblique;
+        font-weight: bold;
+    }
+}

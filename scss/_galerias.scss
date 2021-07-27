@@ -1,0 +1,48 @@
+.contenedor{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    height: 150%;
+    .galeria{
+        width: 100vh;
+        height:100vh;
+        display:grid;
+        grid-template-columns: repeat(4 , 1fr);
+        grid-template-rows: repeat(3 , 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: center;
+        .pic{
+            width: 15vh; 
+            height: 15vh; 
+            border-radius:10%;
+            border: 2px solid;
+            border-color: black;
+            text-align: center;
+            animation-name: nozoompic;
+            animation-duration:.5s;
+        }
+        .pic:hover {
+            animation-name: zoompic;
+            animation-duration:.5s;
+            animation-fill-mode: forwards;
+            }
+    }
+}
+
+
+/* Efectos */
+@keyframes zoompic{
+    100%{
+        transform:scale(1.5)
+    }
+}
+@keyframes nozoompic{
+    0%{
+        transform:scale(1.5)
+    }
+    100%{
+        transform:scale(1)
+    }
+
+}
